@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <script>
+        window.onload=function () {
+            var a=document.getElementById("a");
+            var check=document.getElementById("check");
+            check.onclick=function () {
+                if(a.innerHTML=="百度")
+                {
+                    a.innerHTML="简书";
+                    a.href="http://www.jianshu.com";
+                    check.value="变成百度";
+                }
+                else
+                {
+                    a.innerHTML="百度";
+                    a.href="http://www.baidu.com";
+                    check.value="变成简书";
+                }
+            };
+        }
+    </script>
+</head>
+
+<body>
+<a href="http://www.baidu.com" id="a">百度</a>
+<input type="button" id="check" value="变成简书">
+</body>
+</html>

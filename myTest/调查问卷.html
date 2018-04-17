@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电子产品调查表</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 20px;
+            padding: 10px;
+        }
+        p{
+            padding: 7px;
+        }
+        .red{
+            font-family: "Arial";
+            color: red;
+        }
+        .purple{
+            color: purple;
+        }
+        #year{
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+<h1><span class="red">American Metric</span> <span class="purple">电子产品调查表</span></h1>
+<p>请输入您的姓名：<input type="text"></p>
+<p>请输入您的购买日期：<input type="text" id="year">年
+<select>
+    <option>1月</option>
+    <option>2月</option>
+    <option>3月</option>
+    <option>4月</option>
+    <option>5月</option>
+</select>月
+<select>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+</select>日
+</p>
+<p>请输入您的电子邮件地址：<input type="text"></p>
+<p>您是否查看过我们的在线产品目录？<input type="radio" name="if">是 <input type="radio" name="if">否</p>
+<p>如果查看过，您对哪些产品有兴趣购买？ （选择提供的产品）<br>
+<input type="checkbox">大屏幕电视机 <input type="checkbox">音频设备 <input type="checkbox">视频设备 <input type="checkbox">相机 </p>
+<p>在填写订单之前，您还有什么问题、意见或建议？<br>
+<textarea cols="50" rows="3" >您的输入： </textarea></p>
+<p><input type="submit"><input type="reset"></p>
+</body>
+</html>

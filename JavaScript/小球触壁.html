@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function () {
+            var xpos=0;
+            var ypos=100;
+            var speedX = 5;
+            var speedY = 5;
+            var ball=document.getElementById('ball');
+            var mainBox=document.getElementById('mainBox');
+            var first=document.getElementById('first');
+            var second=document.getElementById('second');
+            var third=document.getElementById('third');
+            setInterval(function () {
+                xpos+=speedX;
+                ypos+=speedY;
+                if(xpos<=0||xpos == mainBox.clientWidth - ball.clientWidth) {
+                 speedX = -speedX;
+                 };
+                 if(ypos<=50||ypos == mainBox.clientHeight - ball.clientHeight) {
+                 speedY = -speedY;
+                 };
+                 if(ypos<=50&&xpos<=98)
+                 {
+                     first.style.display='none';
+                 }
+                else if(ypos<=50&&xpos<=196)
+                {
+                    second.style.display='none';
+                }
+                else if(ypos<=50&&xpos<=294)
+                {
+                    third.style.display='none';
+                }
+                ball.style.left=xpos+'px';
+                ball.style.top=ypos+'px';
+            },20);
+        }
+    </script>
+    <style type="text/css">
+        #mainBox {
+            width: 300px;
+            height: 500px;
+            background: lavender;
+            border: 1px solid gold;
+            margin: auto;
+            position: relative;
+        }
+
+        #ball {
+            width: 30px;
+            height: 30px;
+            background: cyan;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .box{
+            width: 98px;
+            height: 50px;
+            background-color: #6B6B6B;
+            border: 1px solid grey;
+        }
+        #first{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #second{
+            position: absolute;
+            top: 0;
+            left: 98px;
+        }
+        #third{
+            position: absolute;
+            top: 0;
+            left: 196px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="mainBox">
+    <div id="first" class="box"></div>
+    <div id="second" class="box"></div>
+    <div id="third" class="box"></div>
+    <div id="ball">
+
+    </div>
+</div>
+</body>
+
+</html>

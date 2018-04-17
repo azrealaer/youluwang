@@ -1,0 +1,45 @@
+.type{
+    width: 210px;
+    border-right: 1px #dcdcdc solid;
+    border-bottom: 1px #dcdcdc dotted;
+}
+.type p{
+    font-size: 14px ;
+    color: black;
+}
+.type a{
+    font-size: 12px;
+    line-height: 24px;
+    color: #6B6B6B;
+}
+.type a:hover{
+    color: #6B6B6B;
+    text-decoration: underline;
+}
+#totalType{
+    width: 210px;
+    border-right: 1px  solid #dcdcdc;
+}
+.yuyuyu{
+    margin-left: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+#totalType a{
+    font-size: 14px  ;
+    color: #424242;
+}
+#totalType a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+.fenlei{
+    margin-right:  14px;
+    margin-left: 30px;
+    margin-bottom: 16px;
+}
+.title{
+    padding-top: 8px;
+    margin-left: 34px;
+    margin-bottom: 10px;
+}

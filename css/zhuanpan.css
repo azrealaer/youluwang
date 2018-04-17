@@ -1,0 +1,25 @@
+.zhuanpan{
+    width: 750px;
+    /*margin-top: 10px;*/
+    /*margin-left: 10px;*/
+    position: relative;
+}
+.zhuanpan ul{
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+}
+.zhuanpan ul li{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: #6B6B6B;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 10px;
+    opacity: 0.8;
+}
+.zhuanpan a{
+    color: white;
+}

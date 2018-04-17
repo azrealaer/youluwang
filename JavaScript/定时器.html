@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var i=0;
+        var print = function (){
+            var h2=document.getElementById('count');
+            h2.innerHTML=i++;
+        };
+        window.onload=function () {
+            var h2=document.getElementById('count');
+            var timeID=setInterval(print,1000);
+            h2.onclick=function () {
+                clearInterval(timeID);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2 id="count">0</h2>
+</body>
+</html>

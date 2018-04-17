@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单项商品购买</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <style>
+        .sdoujiang{
+            width: 320px;
+            position: relative;
+        }
+        .sdoujiang ul{
+            width: 320px;
+            height: 320px;
+            background-color: #CECECE;
+            opacity: 0.8;
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .sdoujiang ul li{
+            width: 200px;
+            line-height: 60px;
+            font-size: 16px;
+            text-align: center;
+            background-color: yellow;
+            margin-left: 54px;
+            margin-top: 10px;
+        }
+        .sdoujiang .first{
+            margin-top: 60px;
+        }
+        .sdoujiang:hover ul{
+            display: block;
+        }
+        .sdoujiang ul li:hover{
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+<div class="sdoujiang">
+    <img src="../pic/pic1.jpg" width="320" height="320">
+        <ul>
+            <li class="first">立即购买</li>
+            <li>加入购物车</li>
+            <li>收藏</li>
+        </ul>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <script>
+        window.onload=function () {
+            var btn1=document.getElementById('btn1');
+            var btn2=document.getElementById('btn2');
+            var btn3=document.getElementById('btn3');
+            var btn4=document.getElementById('btn4');
+            var div=document.getElementById('div');
+            var timeID=0;
+            btn1.onclick=function () {
+                clearInterval(timeID);
+                timeID=setInterval(function () {
+                    var left=getComputedStyle(div).left;
+                    if(parseInt(left)==0)
+                    {
+                        clearInterval(timeID);
+                        return;
+                    }
+                    div.style.left=parseInt(left)-1+'px';
+                },6);
+            };
+            btn2.onclick=function () {
+                clearInterval(timeID);
+                timeID=setInterval(function () {
+                    var left=getComputedStyle(div).left;
+                    if(parseInt(left)==700)
+                    {
+                        clearInterval(timeID);
+                        return;
+                    }
+                    div.style.left=parseInt(left)+1+'px';
+                },6)
+            };
+            btn3.onclick=function () {
+                clearInterval(timeID);
+                timeID=setInterval(function () {
+                    var top=getComputedStyle(div).top;
+                    if(parseInt(top)==22)
+                    {
+                        clearInterval(timeID);
+                        return;
+                    }
+                    div.style.top=parseInt(top)-1+'px';
+                },6)
+            };
+            btn4.onclick=function () {
+                clearInterval(timeID);
+                timeID=setInterval(function () {
+                    var top=getComputedStyle(div).top;
+                    if(parseInt(top)==720)
+                    {
+                        clearInterval(timeID);
+                        return;
+                    }
+                    div.style.top=parseInt(top)+ 1+'px';
+                },6)
+            };
+        }
+    </script>
+    <style>
+        #div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 300px;
+        }
+        #youdangban{
+            height: 800px;
+            width: 2px;
+            background-color: #5A3900;
+            position: absolute;
+            left: 800px;
+        }
+        #shangdangban{
+            height: 2px;
+            width: 800px;
+            background-color: #5A3900;
+            position: absolute;
+            top: 22px;
+        }
+        #xiadangban{
+            height: 2px;
+            width: 800px;
+            background-color: #5A3900;
+            position: absolute;
+            top: 820px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="向左" id="btn1">
+<input type="button" value="向右" id="btn2">
+<input type="button" value="向上" id="btn3">
+<input type="button" value="向下" id="btn4">
+<div id="div"></div>
+<div id="youdangban"></div>
+<div id="shangdangban"></div>
+<div id="xiadangban"></div>
+</body>
+</html>

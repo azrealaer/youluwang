@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span{
+            background-color: yellow;
+        }
+        p{
+            width: 300px;
+            border: 1px solid red;
+            font-size: 14px;
+            padding: 10px;
+            background-color: #cccccc;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var inputs=document.getElementsByTagName('input');
+            inputs[2].onclick=function () {
+                var p=document.getElementById('words');
+                var oldWord=inputs[0].value;
+                var newWord=inputs[1].value;
+                var str=p.innerHTML;
+                var arrays=str.split(oldWord);
+                var newStr=arrays.join(`<span>${newWord}</span>`);
+                p.innerHTML=newStr;
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text"/>
+<input type="text"/>
+<input type="button" value="替换"/>
+<p id="words">古巴比伦王颁布了汉摩拉比法典
+    刻在黑色的玄武岩
+    距今已经三千七百多年
+    你在橱窗前
+    凝视碑文的字眼
+    我却在旁静静欣赏你那张我深爱的脸</p>
+</body>
+</html>

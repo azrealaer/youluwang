@@ -1,0 +1,50 @@
+.top{
+    height: 30px;
+    line-height: 30px;
+    background-color: #F7F7F7;
+    width: 100%;
+}
+.top{
+    display: inline-block;
+}
+.top *{
+    display: inline-block;
+}
+.top a{
+    display: inline;
+}
+.top span{
+    margin-left: 114px;
+    color: #636363;
+}
+.top div{
+    margin-left: 412px;
+}
+.top a{
+
+    padding-right:10px;
+    padding-left: 15px;
+    border-right: 1px solid #DEDEDE;
+    color: #424242;
+}
+.top a:hover{
+    color: #FF6300;
+    text-decoration: underline;
+}
+#login{
+    padding-right:10px;
+    padding-left: 0;
+    color: #F71000;
+}
+#reg{
+    padding-left: 28px;
+}
+#wx{
+    border: none;
+}
+.top img{
+    padding-left: 15px;
+}
+.top #youlu{
+    padding-left: 0;
+}

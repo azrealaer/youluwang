@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+
+    <style>
+        img {
+            width:100px;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var oDiv = document.getElementById('div1');
+            var oBtn = document.getElementById('btn1');
+            var oPic = document.getElementById('pic1');
+
+            oPic.onclick = function (){
+                // oDiv.style.width = '200px';
+                oPic.style.cssText = ' width:400px; ';
+            };
+            oBtn.onclick = function (){
+                // oDiv.style.width = '100px';
+                oPic.style.cssText = '';
+            };
+        }
+
+    </script>
+</head>
+
+<body>
+
+<div id="div1"><img src="../pic/125-1FH5145039-50.jpg" id="pic1"></div>
+
+<input id="btn1" type="button" value="缩小" />
+
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getAbsoluteTop(Element) {
+            var currentElement=Element;
+            var offsetParent=currentElement.offsetParent;
+            var top=0;
+            while (offsetParent!=null)
+            {
+                top+=currentElement.offsetTop;
+                currentElement=currentElement.offsetParent;
+                offsetParent=currentElement.offsetParent;
+            }
+            return top;
+        }
+        function getAbsoluteLeft(Element) {
+            var currentElement=Element;
+            var offsetParent=currentElement.offsetParent;
+            var left=0;
+            while (offsetParent!=null)
+            {
+                left+=currentElement.offsetLeft;
+                currentElement=currentElement.offsetParent;
+                offsetParent=currentElement.offsetParent;
+            }
+            return left;
+        }
+        window.onload=function () {
+            var son=document.getElementById('son');
+            var parent=document.getElementById('parent');
+            alert(getAbsoluteTop(son));
+            alert(getAbsoluteLeft(son));
+        }
+    </script>
+    <style>
+        #son{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 200px;
+            top:200px;
+        }
+        #parent{
+            width: 400px;
+            height: 400px;
+            background-color: deepskyblue;
+            position: absolute;
+            left:100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="parent">
+    <div id="son">
+
+    </div>
+</div>
+</body>
+</html>

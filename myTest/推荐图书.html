@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>推荐图书</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <style>
+        .tushu{
+            width: 760px;
+            /*height: 600px;*/
+            margin: 0 auto;
+            margin-top: 26px;
+            /*border: 1px solid black;*/
+        }
+        .tushu p{
+            width: 700px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #424242;
+            /*border: 1px solid grey;*/
+            float: left;
+            margin-left: 10px;
+            margin-bottom: 4px;
+        }
+        #red{
+            font-weight:bold;
+            color: #CE0000;
+        }
+        .fenshu{
+            height: 24px;
+            line-height: 24px;
+            float: right;
+            font-size: 16px;
+            font-weight: normal;
+            text-align: right;
+            color: #9C9C9C;
+            display: inline-block;
+            /*border: 1px solid red;*/
+            margin-right: 10px;
+            margin-bottom: 4px;
+        }
+        .tushu hr{
+            width: 760px;
+            float: left;
+        }
+        .tushu ul li
+        {
+            float: left;
+            margin: 4px 32px;
+        }
+        .tushu ul li ul li{
+            float: none;
+            margin: 0;
+            margin-top: 10px;
+        }
+        .tushu ul li ul li a{
+            color: #424242;
+        }
+        .tushu ul li ul li a:hover{
+            text-decoration: underline;
+            color: #FF6300;
+        }
+        .tushu ul li ul .writer{
+            color: #9C9C9C;
+            margin-top: 18px;
+        }
+        .tushu ul li ul .sales{
+            color: #9C9C9C;
+            text-decoration: line-through;
+            display: inline-block;
+        }
+        .tushu ul li ul .lowsales{
+            color: #FF0000;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+<div class="tushu">
+    <p><img src="../pic/laba.jpg">推荐图书</p>
+    <h1 class="fenshu"><span id="red">1</span>/4</h1>
+    <hr style="height:1px;border:none;border-top:1px solid #DEDEDE;">
+
+    <ul>
+        <li>
+            <a href="#"><img src="../pic/狼图腾.jpg" width="130" height="160"></a>
+            <ul>
+                <li><a href="#">狼图腾（修订版）</a></li>
+                <li class="writer">姜戎</li>
+                <li class="lowsales">¥15.90</li>
+                <li class="sales">¥39.80</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#"><img src="../pic/文化苦旅.jpg" width="106" height="160"></a>
+            <ul>
+                <li><a href="#">文化苦旅-新版</a></li>
+                <li class="writer">余秋雨</li>
+                <li class="lowsales">¥15.20</li>
+                <li class="sales">¥38.00</li>
+            </ul>
+        </li>        <li>
+        <a href="#"><img src="../pic/平凡的世界.jpg" width="110" height="160"></a>
+        <ul>
+            <li><a href="#">平凡的世界(全三册)</a></li>
+            <li class="writer">路遥</li>
+            <li class="lowsales">¥31.90</li>
+            <li class="sales">¥79.80</li>
+        </ul>
+    </li>        <li>
+        <a href="#"><img src="../pic/偷影子的人.jpg" width="150" height="160"></a>
+        <ul>
+            <li><a href="#">偷影子的人</a></li>
+            <li class="writer">[法]马克.李维</li>
+            <li class="lowsales">¥11.90</li>
+            <li class="sales">¥29.80</li>
+        </ul>
+    </li>        <li>
+        <a href="#"><img src="../pic/摆渡人.jpg" width="110" height="160"></a>
+        <ul>
+            <li><a href="#">摆渡人</a></li>
+            <li class="writer">百花洲文艺出版社</li>
+            <li class="lowsales">¥14.40</li>
+            <li class="sales">¥36.00</li>
+        </ul>
+    </li>        <li>
+        <a href="#"><img src="../pic/人类简史.jpg" width="110" height="160"></a>
+        <ul>
+            <li><a href="#">人类简史</a></li>
+            <li class="writer">中信出版社</li>
+            <li class="lowsales">¥27.20</li>
+            <li class="sales">¥68.00</li>
+        </ul>
+    </li>        <li>
+        <a href="#"><img src="../pic/蔡永康.jpg" width="150" height="160"></a>
+        <ul>
+            <li><a href="#">蔡永康的说话之道(共2册)</a></li>
+            <li class="writer">蔡永康</li>
+            <li class="lowsales">¥26.00</li>
+            <li class="sales">¥65.00</li>
+        </ul>
+    </li>        <li>
+        <a href="#"><img src="../pic/将来的你.jpg" width="110" height="160"></a>
+        <ul>
+            <li><a href="#">将来的你</a></li>
+            <li class="writer">汤木</li>
+            <li class="lowsales">¥12.80</li>
+            <li class="sales">¥32.00</li>
+        </ul>
+    </li>
+    </ul>
+</div>
+</body>
+</html>

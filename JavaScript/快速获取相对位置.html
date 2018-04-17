@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: absolute;
+            left:200px;
+            top: 1000px;
+        }
+        #btn{
+            position: fixed;
+            top:20px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById('btn');
+
+            btn.onclick = function () {
+                var scroll_top = document.documentElement.scrollTop || document.body.scrollTop;
+                var div = document.getElementById('div');
+                var obj = div.getBoundingClientRect();
+                console.log("left" + obj.left);//200,div左边距离视口左边的距离
+                console.log("top" + obj.top);//300,div顶边距离视口顶边的距离
+                console.log("right" + obj.right);//300,div右边距离视口左边的距离
+                console.log("bottom" + obj.bottom);//400,div底边距离视口顶边的距离
+                console.log("scroll_top" + scroll_top);
+                console.log("top绝对" + (obj.top+scroll_top));
+            }
+
+        }
+    </script>
+</head>
+<body style="height: 2000px">
+<div id="div">
+
+</div>
+<input type="button" id="btn" value="ok">
+</body>
+</html>

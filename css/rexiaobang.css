@@ -1,0 +1,88 @@
+.rexiaobang{
+    width: 224px;
+    /*border: 1px solid black;*/
+    float: right;
+}
+.rexiaobang h3{
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 22px;
+    /*border: 1px solid grey;*/
+}
+.rexiaobang h3 span{
+    display: block;
+    /*border:1px solid red;*/
+}
+.rexiaobang .bangdan{
+    margin-top: -14px;
+    border: 1px solid #CECECE;
+}
+.rexiaobang ul li{
+    border-bottom: 1px dashed grey;
+}
+.rexiaobang .hide{
+    height: 45px;
+    color: #424242;
+    line-height: 45px;
+    margin-left: 10px;
+}
+.rexiaobang .appear{
+    display: none;
+    height: 104px;
+
+}
+.rexiaobang ul li:hover .hide{
+    display: none;
+}
+.rexiaobang ul li:hover .appear{
+    display: block;
+}
+.rexiaobang ul li span{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: top;
+}
+.rexiaobang ul li .red{
+    color: #D60000;
+}
+.rexiaobang ul li .black{
+    color: black;
+}
+.appear span{
+    margin-top: 24px;
+    margin-left: 12px;
+}
+.appear img{
+    margin-top: 10px;
+    min-width: 50px;
+    height: 74px;
+}
+.appear ul{
+    width: 70px;
+    float: right;
+    margin-top: 14px;
+    margin-right: 42px;
+}
+.appear ul li{
+    border: none;
+}
+.appear a{
+    color: #424242;
+}
+.appear a:hover{
+    color: #FF6300;
+    text-decoration: underline;
+}
+.appear .lowsales{
+    color: #DE0000;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.appear .sales{
+    color: #9C9C9C;
+    text-decoration: line-through;
+}

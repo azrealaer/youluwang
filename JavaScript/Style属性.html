@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            var oBtn1 = document.getElementById('btn1');
+            var oBtn2 = document.getElementById('btn2');
+            var oBtn3 = document.getElementById('btn3');
+            var oBtn4 = document.getElementById('btn4');
+            var oBtn5 = document.getElementById('btn5');
+            var oP = document.getElementById('p1');
+            var num = 14;
+
+            oBtn1.onclick = function (){
+                num -= 2;
+                oP.style.fontSize = num + 'px';
+            };
+            oBtn2.onclick = function (){
+                num += 2;
+                oP.style.fontSize = num + 'px';
+            };
+            oBtn3.onclick = function (){
+                oP.className='yellow';
+            };
+            oBtn4.onclick = function (){
+                oP.className='red';
+            };
+            oBtn5.onclick = function () {
+                oP.className='reset';
+            };
+        };
+    </script>
+    <style>
+        .red{
+            width:400px;
+            background-color: yellow;
+            color: red;
+        }
+        .yellow{
+            width:400px;
+            background-color: red;
+            color: yellow;
+        }
+        .reset{
+            background-color: white;
+            color: black;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<input id="btn1" type="button" value="-" />
+<input id="btn2" type="button" value="+" />
+<input id="btn3" type="button" value="红" />
+<input id="btn4" type="button" value="黄" />
+<input id="btn5" type="button" value="重置"/>
+<p id="p1">
+    html文档中的每一个元素都是一个对象,文档的每个元素都有一个属性style。通过style属性可以设置元素的任意css样式
+</p>
+
+</body>
+</html>

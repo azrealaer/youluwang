@@ -1,0 +1,58 @@
+.searchT div{
+    float: left;
+    margin-top: 36px;
+}
+.search{
+    width: 520px;
+    margin-left: 64px;
+}
+.search .input{
+    font-size: 14px;
+    width: 400px;
+    height: 32px;
+    border: 3px solid #DE0000;
+    vertical-align: top;
+}
+.search .btn{
+    width: 100px;
+    height: 40px;
+    background-color: #DE0000;
+    margin-left: -6px;
+    margin-bottom: 8px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.pic{
+    margin-left: 110px;
+}
+.shoppingCar{
+    margin-left: 86px;
+}
+.shoppingCar ul{
+    float: right;
+    margin-left: 10px;
+    line-height: 18px;
+}
+.shoppingCar ul li a{
+    color: #5A3900;
+}
+.shoppingCar ul li a span{
+    color: #DE0000;
+}
+.shoppingCar ul li a:hover{
+    text-decoration: underline;
+}
+.search span{
+    font-size: 16px;
+}
+.search span a{
+    color: black;
+    padding-left: 8px;
+}
+.search span a:hover{
+    color: #FF6300;
+    text-decoration: underline;
+}

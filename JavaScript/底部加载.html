@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onscroll=function () {
+            var viewpointHeight=document.documentElement.clientHeight;
+            var documentHeight=document.documentElement.scrollHeight;
+            var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+            if(documentHeight-viewpointHeight==scrollTop)
+            {
+                var body=document.getElementById('body');
+                var div=document.createElement('div');
+                div.innerHTML='新文章列表';
+                div.style.height='2000px';
+                body.appendChild(div)
+            }
+        }
+    </script>
+</head>
+<body id="body">
+<div style="height: 2000px">
+
+</div>
+</body>
+</html>

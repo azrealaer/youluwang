@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索商品</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <style>
+        .searchT div{
+            float: left;
+            margin-top: 36px;
+        }
+        .search{
+            width: 520px;
+            margin-left: 64px;
+        }
+        .search .input{
+            font-size: 14px;
+            width: 400px;
+            height: 32px;
+            border: 3px solid #DE0000;
+            vertical-align: top;
+        }
+        .search .btn{
+            width: 100px;
+            height: 40px;
+            background-color: #DE0000;
+            margin-left: -6px;
+            margin-bottom: 8px;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+        .pic{
+            margin-left: 110px;
+        }
+        .shoppingCar{
+            margin-left: 86px;
+        }
+        .shoppingCar ul{
+            float: right;
+            margin-left: 10px;
+            line-height: 18px;
+        }
+        .shoppingCar ul li a{
+            color: #5A3900;
+        }
+        .shoppingCar ul li a span{
+            color: #DE0000;
+        }
+        .shoppingCar ul li a:hover{
+            text-decoration: underline;
+        }
+        .search span{
+            font-size: 16px;
+        }
+        .search span a{
+            color: black;
+            padding-left: 8px;
+        }
+        .search span a:hover{
+            color: #FF6300;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="searchT">
+<div class="pic"><img src="../pic/logo.jpg"></div>
+<div class="search">
+    <input type="text" class="input" placeholder="书名、作者、出版社、ISBN、文具">
+    <input type="button" class="btn" value="搜索">
+    <span>
+    热门搜索：
+    <a href="#">公务员考试</a><a href="#">四六级</a><a href="#">高等数学</a><a href="#">自考</a></span>
+</div>
+<div class="shoppingCar">
+    <img src="../pic/cart.jpg">
+    <ul>
+        <li><a href="#">网站购物车 <span>0</span>本</a></li>
+        <li><a href="#">店铺购物车 <span>0</span>本</a></li>
+    </ul>
+</div>
+</div>
+</body>
+</html>

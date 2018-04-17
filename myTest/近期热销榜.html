@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>近期热销榜</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <style>
+        .rexiaobang{
+            width: 220px;
+            /*border: 1px solid black;*/
+            float: right;
+        }
+        .rexiaobang h3{
+            height: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-top: 22px;
+            /*border: 1px solid grey;*/
+        }
+        .rexiaobang h3 span{
+            display: block;
+            /*border:1px solid red;*/
+        }
+        .rexiaobang .bangdan{
+            margin-top: -14px;
+            border: 1px solid #CECECE;
+        }
+        .rexiaobang ul li{
+            border-bottom: 1px dashed grey;
+        }
+        .rexiaobang .hide{
+            height: 45px;
+            color: #424242;
+            line-height: 45px;
+            margin-left: 10px;
+        }
+        .rexiaobang .appear{
+            display: none;
+            height: 104px;
+
+        }
+        .rexiaobang ul li:hover .hide{
+            display: none;
+        }
+        .rexiaobang ul li:hover .appear{
+            display: block;
+        }
+        .rexiaobang ul li span{
+            display: inline-block;
+            font-weight: bold;
+            font-size: 16px;
+            vertical-align: top;
+        }
+        .rexiaobang ul li .red{
+            color: #D60000;
+        }
+        .rexiaobang ul li .black{
+             color: black;
+         }
+        .rexiaobang .appear span{
+            margin-top: 24px;
+            margin-left: 12px;
+        }
+        .rexiaobang .appear img{
+            margin-top: 10px;
+            min-width: 50px;
+            height: 74px;
+        }
+        .rexiaobang .appear ul{
+            width: 70px;
+            float: right;
+            margin-top: 14px;
+            margin-right: 42px;
+        }
+        .rexiaobang .appear ul li{
+            border: none;
+        }
+        .rexiaobang .appear a{
+            color: #424242;
+        }
+        .rexiaobang .appear a:hover{
+            color: #FF6300;
+            text-decoration: underline;
+        }
+        .rexiaobang .appear .lowsales{
+            color: #DE0000;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .rexiaobang .appear .sales{
+            color: #9C9C9C;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+<div class="rexiaobang">
+    <h3><span>近期热销榜</span></h3>
+    <div class="bangdan">
+        <ul>
+            <li>
+                <div class="hide">
+                    <span class="red">1</span> 萤火虫小巷
+                </div>
+                <div class="appear">
+                    <span class="red">1</span>
+                    <img src="../pic/萤火虫小巷.jpg">
+                    <ul>
+                        <li><a href="#">萤火虫小巷</a></li>
+                        <li class="lowsales">¥14.40</li>
+                        <li class="sales">¥36.00</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="red">2</span> 如果蜗牛有爱情（上下）
+                </div>
+                <div class="appear">
+                    <span class="red">2</span>
+                    <img src="../pic/蜗牛爱情.jpg">
+                    <ul>
+                        <li><a href="#">如果蜗牛有爱情（上下）</a></li>
+                        <li class="lowsales">¥25.00</li>
+                        <li class="sales">¥49.80</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="red">3</span> 语言学纲要（修订版）
+                </div>
+                <div class="appear">
+                    <span class="red">3</span>
+                    <img src="../pic/语言学纲要.jpg">
+                    <ul>
+                        <li><a href="#">语言学纲要（修订版）</a></li>
+                        <li class="lowsales">¥6.50</li>
+                        <li class="sales">¥26.00</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="black">4</span> 管理信息系统（第五版）
+                </div>
+                <div class="appear">
+                    <span class="black">4</span>
+                    <img src="../pic/管理信息.jpg">
+                    <ul>
+                        <li><a href="#">管理信息系统（第五版）</a></li>
+                        <li class="lowsales">¥8.00</li>
+                        <li class="sales">¥39.80</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="black">5</span> 数字信号处理（第三版）
+                </div>
+                <div class="appear">
+                    <span class="black">5</span>
+                    <img src="../pic/数字信号.jpg">
+                    <ul>
+                        <li><a href="#">数字信号处理（第三版）</a></li>
+                        <li class="lowsales">¥7.00</li>
+                        <li class="sales">¥32.00</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="black">6</span> 美国文学选读（第三版）
+                </div>
+                <div class="appear">
+                    <span class="black">6</span>
+                    <img src="../pic/美国文学.jpg">
+                    <ul>
+                        <li><a href="#">美国文学选读（第三版）</a></li>
+                        <li class="lowsales">¥9.40</li>
+                        <li class="sales">¥37.50</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="black">7</span> C程序设计（第四版）
+                </div>
+                <div class="appear">
+                    <span class="black">7</span>
+                    <img src="../pic/C.jpg">
+                    <ul>
+                        <li><a href="#">C程序设计（第四版）</a></li>
+                        <li class="lowsales">¥6.60</li>
+                        <li class="sales">¥29.00</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="black">8</span> 高等数学（第六版）（下册）
+                </div>
+                <div class="appear">
+                    <span class="black">8</span>
+                    <img src="../pic/高数.jpg">
+                    <ul>
+                        <li><a href="#">高等数学（第六版）（下册）</a></li>
+                        <li class="lowsales">¥5.50</li>
+                        <li class="sales">¥29.40</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="black">9</span> 细节决定美丽
+                </div>
+                <div class="appear">
+                    <span class="black">9</span>
+                    <img src="../pic/细节决定美丽.jpg">
+                    <ul>
+                        <li><a href="#">细节决定美丽</a></li>
+                        <li class="lowsales">¥11.20</li>
+                        <li class="sales">¥28.00</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="hide">
+                    <span class="black">10</span> 上班族妈妈
+                </div>
+                <div class="appear">
+                    <span class="black">10</span>
+                    <img src="../pic/上班族.jpg">
+                    <ul>
+                        <li><a href="#">上班族妈妈</a></li>
+                        <li class="lowsales">¥15.20</li>
+                        <li class="sales">¥38.00</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页</title>
+    <link href="../css/reset.css" rel="stylesheet">
+    <style>
+        .pages{
+            width: 600px;
+            background-color: #EFEFEF;
+            margin-top: 90px;
+            margin-left: 422px;
+            padding-top: 16px;
+            padding-bottom:16px ;
+            color: black;
+            vertical-align: middle;
+        }
+        .pages div{
+            background-color: #FFFFFF;
+            margin-right: 1px;
+            display: inline-block;
+            width: 24px;
+            height: 28px;
+            font-size: 12px;
+            line-height: 28px;
+            border: 1px solid #CECECE;
+            text-align: center;
+        }
+        .pages .lnm{
+            width: 47px;
+        }
+        .pages #first{
+            margin-left: 56px;
+        }
+        .pages a{
+            color: black;
+        }
+        .pages div:hover {
+            border-color: #FF0000;
+        }
+        .pages div:hover  a{
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+<div class="pages">
+    <div class="lnm" id="first"><a href="#">上一页</a></div>
+    <div>1</div>
+    <div><a href="#">2</a></div>
+    <div><a href="#">3</a></div>
+    <div><a href="#">4</a></div>
+    <div><a href="#">5</a></div>
+    <div><a href="#">6</a></div>
+    <div><a href="#">7</a></div>
+    <div><a href="#">8</a></div>
+    <div><a href="#">9</a></div>
+    <div><a href="#">10</a></div>
+    <div class="lnm"><a href="#">...87</a></div>
+    <div class="lnm"><a href="#" id="last">下一页</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var box = document.getElementById("box");
+            box.addEventListener("click", function () {
+                console.log("我是box1");
+            })
+            box.addEventListener("click", function () {
+                box.style.fontSize = "18px";
+                console.log("我是box2");
+            })
+/*            box.onclick = function () {
+                console.log("我是box1");
+            }
+            box.onclick = function () {
+                box.style.fontSize = "18px";
+                console.log("我是box2");
+            }*/
+        }
+
+    </script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+
+</div>
+</body>
+</html>

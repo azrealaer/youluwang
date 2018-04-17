@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>购物车</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        h1 {
+            text-align:center;
+        }
+        table {
+            margin:0 auto;
+            width:60%;
+            border:2px solid #aaa;
+            border-collapse:collapse;
+        }
+        table th, table td {
+            border:2px solid #aaa;
+            padding:5px;
+        }
+        th {
+            background-color:#eee;
+        }
+    </style>
+    <script type="text/javascript">
+        var map = new Map();
+        function add_shoppingcart(btn) {
+            var shoppingCartTab=document.getElementsByTagName('table')[1];
+            var thingName=btn.parentNode.parentNode.firstElementChild.innerHTML;
+            var thingSale=btn.parentNode.parentNode.firstElementChild.nextElementSibling.innerHTML;
+            if(map.has(thingName))
+            {
+                var tr = map.get(thingName);
+                increase(tr.cells[2].lastElementChild);
+            }
+            else
+            {
+                var tr=document.createElement('tr');
+                var info = `<td>${thingName}</td>
+                          <td>${thingSale}</td>
+                          <td align="center">
+                              <input type="button" value="-" onclick="decrease(this)"/>
+                              <input type="text" size="3" readonly value="1"/>
+                              <input type="button" value="+" onclick="increase(this)"/>
+                          </td>
+                          <td>${thingSale}</td>
+                          <td align="center">
+                              <input type="button" value="x" onclick="del(this)"/>
+                          </td>`;
+                tr.innerHTML=info;
+                shoppingCartTab.tBodies[0].appendChild(tr);
+                map.set(thingName, tr);
+            }
+            sum();
+        }
+        function decrease(btn) {
+            var count=parseInt(btn.nextElementSibling.value);
+            var sale=parseInt(btn.parentNode.previousElementSibling.innerHTML);
+            if(count<=1)
+            {
+                count=1;
+            }
+            else {
+                count--;
+            }
+            btn.nextElementSibling.value=count;
+            var price=sale*count;
+            btn.parentNode.nextElementSibling.innerHTML=price;
+            sum();
+        }
+        function increase(btn) {
+            var count=parseInt(btn.previousElementSibling.value);
+            var sale=parseInt(btn.parentNode.previousElementSibling.innerHTML);
+            count++;
+            btn.previousElementSibling.value=count;
+            var price=sale*count;
+            btn.parentNode.nextElementSibling.innerHTML=price;
+            sum();
+        }
+        function del(btn) {
+            btn.parentNode.parentNode.remove();
+            map.delete(btn.parentNode.parentNode.firstElementChild.innerHTML);
+            sum();
+        }
+        
+        function sum() {
+            var tbody = document.getElementById('goods');
+            var total = 0;
+            for(var i = 0; i < tbody.children.length;i++)
+            {
+                var price = parseInt(tbody.children[i].cells[3].innerHTML);
+                total += price;
+            }
+
+            document.getElementById('total').innerHTML = total;
+
+        }
+    </script>
+</head>
+<body>
+<h1>真划算</h1>
+<table>
+    <tr>
+        <th>商品</th>
+        <th>单价(元)</th>
+        <th>颜色</th>
+        <th>库存</th>
+        <th>好评率</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td>罗技M185鼠标</td>
+        <td>80</td>
+        <td>黑色</td>
+        <td>893</td>
+        <td>98%</td>
+        <td align="center">
+            <input type="button" value="加入购物车" onclick="add_shoppingcart(this)"/>
+        </td>
+    </tr>
+    <tr>
+        <td>微软X470键盘</td>
+        <td>150</td>
+        <td>黑色</td>
+        <td>9028</td>
+        <td>96%</td>
+        <td align="center">
+            <input type="button" value="加入购物车" onclick="add_shoppingcart(this);"/>
+        </td>
+    </tr>
+    <tr>
+        <td>洛克iphone6手机壳</td>
+        <td>60</td>
+        <td>透明</td>
+        <td>672</td>
+        <td>99%</td>
+        <td align="center">
+            <input type="button" value="加入购物车" onclick="add_shoppingcart(this);"/>
+        </td>
+    </tr>
+    <tr>
+        <td>蓝牙耳机</td>
+        <td>100</td>
+        <td>蓝色</td>
+        <td>8937</td>
+        <td>95%</td>
+        <td align="center">
+            <input type="button" value="加入购物车" onclick="add_shoppingcart(this);"/>
+        </td>
+    </tr>
+    <tr>
+        <td>金士顿U盘</td>
+        <td>70</td>
+        <td>红色</td>
+        <td>482</td>
+        <td>100%</td>
+        <td align="center">
+            <input type="button" value="加入购物车" onclick="add_shoppingcart(this);"/>
+        </td>
+    </tr>
+</table>
+
+<h1>购物车</h1>
+<table>
+    <thead>
+    <tr>
+        <th>商品</th>
+        <th>单价(元)</th>
+        <th>数量</th>
+        <th>金额(元)</th>
+        <th>删除</th>
+    </tr>
+    </thead>
+    <tbody id="goods">
+    <!--<tr>
+      <td>罗技M185鼠标</td>
+      <td>80</td>
+      <td align="center">
+        <input type="button" value="-" onclick="decrease(this)"/>
+        <input type="text" size="3" readonly value="1"/>
+        <input type="button" value="+" onclick="increase(this)"/>
+      </td>
+      <td>80</td>
+      <td align="center"><input type="button" value="x" onclick="del(this)"/></td>
+    </tr>-->
+  </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="3" align="right">总计</td>
+        <td id="total"></td>
+        <td></td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

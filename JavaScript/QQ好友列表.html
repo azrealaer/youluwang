@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+            font-family:"微软雅黑";
+        }
+        #friend{
+            width:300px;
+            margin:50px auto 0;
+            border-left:1px solid #ccc;
+            border-right:1px solid #dadada;
+        }
+        #friend h2{
+            width:270px;
+            height:35px;
+            line-height:35px;
+            padding-left:30px;
+            background: #74a400;
+            color:#fff;
+            font-size:16px;
+            font-weight:100;
+            cursor:pointer;
+        }
+
+        #friend li{
+            margin-bottom:1px;
+        }
+        #friend li ul li{
+            width:270px;
+            padding-left:30px;
+            height:30px;
+            line-height:30px;
+            border-bottom:1px solid #ccc;
+            cursor:pointer;
+        }
+
+        #friend li ul .active{
+            background:#FFC;
+        }
+        #friend li ul{
+            display:none;
+        }
+        #friend li ul.hover{
+            display:block;
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            var oUl = document.getElementById('friend');
+            var aH = oUl.getElementsByTagName('h2');
+            var aUl = oUl.getElementsByTagName('ul');
+
+
+            for ( var i=0; i < aH.length; i++ ) {
+
+                aH[i].index = i;
+
+                aH[i].onclick = function () {
+
+                    if ( aUl[this.index].className == '' ) {
+                        aUl[this.index].className = 'hover';
+                    } else {
+                        aUl[this.index].className = '';
+                    }
+                };
+            }
+            for ( var j=0; j<aUl.length; j++ ) {
+                var aLi = aUl[j].getElementsByTagName('li');
+                for (var i = 0; i < aLi.length; i++) {
+                    aLi[i].onmouseover = function () {
+                        this.className = 'active';
+                    };
+                    aLi[i].onmouseout = function () {
+                        this.className = '';
+                    };
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="friend">
+    <li>
+        <h2>我的好友</h2>
+        <ul>
+            <li>王一一</li>
+            <li>李文化</li>
+            <li>高发展</li>
+        </ul>
+    </li>
+    <li>
+        <h2>我的同事</h2>
+        <ul>
+            <li>黄腾达</li>
+            <li>刘和谐</li>
+            <li>邢如意</li>
+            <li>沈从文</li>
+            <li>张曼玉</li>
+        </ul>
+    </li>
+    <li>
+        <h2>我的同学</h2>
+        <ul>
+            <li>郭文明</li>
+            <li>尹调整</li>
+            <li>郑安全</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.blackboard,#last{
+    width: 222px;
+    border: 1px solid #EFEFEF;
+}
+.blackboard h3,#last h3{
+    font: bold 16px "宋体";
+    padding: 10px 16px;
+}
+.blackboard a,#last a{
+    color: #424242;
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 40px;
+}
+.blackboard a:hover,#last a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+#last{
+    margin-bottom: 14px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var input=document.getElementById('input');
+            var btn=document.getElementById('btn');
+            btn.onclick=function () {
+                var map=new Map();
+                var str = input.value;
+                var arrays=str.split("");
+                for(var i=0;i<arrays.length;i++)
+                {
+                    if(map.has(arrays[i]))
+                    {
+                        var count=map.get(arrays[i]);
+                        count++;
+                        map.set(arrays[i],count);
+                    }
+                    else
+                    {
+                        map.set(arrays[i],1);
+                    }
+                }
+                var div=document.getElementById('out');
+                var result='';
+                for(var entry of map)
+                {
+//                    result+='<span class="red">'+entry[0]+'</span>出现了<span class="blue">'+entry[1]+'</span>次<br>';
+                    result+=`<span class="red">${entry[0]}</span>出现了<span class="blue">${entry[1]}</span>次<br>`
+                }
+                div.innerHTML=result;
+            }
+        }
+    </script>
+</head>
+<body>
+<textarea id="input" rows="30" cols="30"></textarea>
+<input id="btn" type="button" value="提交">
+<div id="out"></div>
+</body>
+</html>

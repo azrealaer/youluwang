@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>test</title>
+    <style>
+        body {
+            /*height: 5000px;*/
+        }
+        a {
+            position: fixed;
+            right: 100px;
+            width: 50px;
+            height: 50px;
+            background: red;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            display: block;
+        }
+        .toTop {
+            bottom: 160px;
+        }
+        .toBottom {
+            bottom: 100px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var a = document.getElementById('top');
+            a.onclick = function () {
+                var timeId = setInterval(function () {
+                    if(document.documentElement.scrollTop || document.body.scrollTop== 0)
+                    {
+                        alert('计时器停止了');
+                        clearInterval(timeId);
+                    }
+                    window.scrollBy(0,-500);
+
+                },10);
+            };
+
+            var aBottom = document.getElementById('bottom');
+
+            var viewportHeight = document.documentElement.clientHeight;
+            var documentHeight = document.documentElement.scrollHeight;
+
+            aBottom.onclick = function () {
+                var timeId = setInterval(function () {
+                    var scroll_top = document.documentElement.scrollTop || document.body.scrollTop;
+                    if(scroll_top + viewportHeight == documentHeight)
+                    {
+                        alert('计时器停止了');
+                        clearInterval(timeId);
+                    }
+                    window.scrollBy(0,500);
+
+                },10);
+            }
+        }
+    </script>
+</head>
+
+<body style="height: 5000px">
+<a href="javascript:;" class="toTop" id ="top">上</a>
+<a href="javascript:;" class="toBottom" id="bottom">下</a>
+</body>
+
+</html>

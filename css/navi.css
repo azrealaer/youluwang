@@ -1,0 +1,24 @@
+.navi{
+    width: 1440px;
+    height: 38px;
+    background-color: #DE0000;
+}
+.navi li{
+    float: left;
+    line-height: 36px;
+    padding: 0 25px;
+}
+.navi li a{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.navi #first{
+    background-color: #CE0000;
+    padding-left: 20px;
+    padding-right: 100px;
+    margin-left: 120px;
+}
+.navi li:hover{
+    background-color: #C60808;
+}

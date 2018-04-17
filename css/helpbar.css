@@ -1,0 +1,11 @@
+.helpBar {
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.helpBar a{
+    color: black;
+}
+.helpBar a:visited{
+    color: black;
+}

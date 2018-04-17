@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.onkeydown=function (ev) {
+            var div=document.getElementById('div1');
+            var myEvent=ev||event;
+            if(myEvent.keyCode==39&&div.offsetLeft>0)
+            {
+                div.style.left=div.offsetLeft+30+'px';
+                document.onkeydown=function () {
+                    if(myEvent.keyCode==40&&div.offsetTop>0)
+                    {
+                        div.style.top=div.offsetTop+30+'px';
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 30px;
+            top:30px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

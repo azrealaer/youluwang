@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <script>
+        window.onload=function () {
+            var oPic=document.getElementById('pic');
+            var arrays=['../pic/book1.jpg','../pic/book2.jpg','../pic/book3.jpg','../pic/book4.jpg'];
+            var index=0;
+            oPic.onclick=function () {
+                if(index===arrays.length-1)
+                {
+                    index=0;
+                }
+                else {
+                    index++;
+                }
+                oPic.src=arrays[index];
+            }
+        }
+    </script>
+</head>
+<body>
+<img src="../pic/book1.jpg" id="pic"/>
+</body>
+</html>
